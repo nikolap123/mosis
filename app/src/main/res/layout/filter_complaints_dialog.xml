@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/filterComplaintDialogCardView"
+    style="@style/dialogCardView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/filterComplaintsDialogGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <TextView
+            android:id="@+id/filterComplaintsDialogRadiusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radius"
+            android:textColor="@color/search_border"
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/filterComplaintsDialogRadius"
+            app:layout_constraintEnd_toStartOf="@id/filterComplaintsDialogGuideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/filterComplaintsDialogRadius"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:hint="@string/enter_radius_of_search"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="@color/search_border"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/filterComplaintsDialogGuideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/filterComplaintsDialogDivider"
+            style="@style/dialogDivider"
+            app:layout_constraintBottom_toTopOf="@id/filterComplaintsDialogApplyBtn"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/filterComplaintsDialogApplyBtn"
+            style="@style/dialogButton"
+            android:layout_marginBottom="20dp"
+            android:text="@string/apply"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

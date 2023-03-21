@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="btnMarginStart">20dp</dimen>
+    <dimen name="btnMarginEnd">20dp</dimen>
+    <dimen name="btnTop">20dp</dimen>
+    <dimen name="layoutRegMarginTop">30dp</dimen>
+    <dimen name="layoutMarginTop">125dp</dimen>
+    <dimen name="txtInputMargin">10dp</dimen>
+    <dimen name="btnDim">200dp</dimen>
+    <dimen name="textSize">17sp</dimen>
+    <dimen name="btnSize">20sp</dimen>
+    <dimen name="logoSize">30sp</dimen>
+    <dimen name="txtMarginStart">20dp</dimen>
+    <dimen name="txtMarginEnd">20dp</dimen>
+    <dimen name="logoWidth">260dp</dimen>
+    <dimen name="logoHight">50dp</dimen>
+
+    <!-- ShapeableImageView dimens -->
+    <dimen name="shapeableImageViewCornerRadius">40dp</dimen>
+    <dimen name="shapeableImageViewCornerRadiusHome">75dp</dimen>
+    <dimen name="shapeableImageViewCornerRadiusProfile">65dp</dimen>
+
+    <!-- Dialog CardView dimens -->
+    <dimen name="dividerHeight">1dp</dimen>
+    <dimen name="dialogCardViewMargins">10dp</dimen>
+    <dimen name="dialogCardViewCornerRadius">30dp</dimen>
+    <dimen name="dialogCardViewElevation">15dp</dimen>
+
+    <!-- RecycleView CardView dimens -->
+    <dimen name="recyclerViewCardViewElevation">5dp</dimen>
+    <dimen name="recyclerViewCardViewCornerRadius">5dp</dimen>
+    <dimen name="recyclerViewCardViewMargins">5dp</dimen>
+
+    <dimen name="zerodp">0dp</dimen>
+
+    <!-- ProfileFragment Buttons dimens -->
+    <dimen name="profileBtnWidth">175dp</dimen>
+    <dimen name="profileBtnTextSize">15sp</dimen>
+    <dimen name="profileBtnMarginStart">10dp</dimen>
+    <dimen name="profileBtnMarginTop">5dp</dimen>
+
+    <!-- ProfileFragment TextView dimens -->
+    <dimen name="profileTVTextSize">25sp</dimen>
+    <dimen name="profileTVMarginEnd">10dp</dimen>
+
+    <!-- ProfileFragment TextInputEditText dimens -->
+    <dimen name="profileTIETWidth">200dp</dimen>
+    <dimen name="profileTIETMargin">20dp</dimen>
+    <dimen name="profileTIETTextSize">25sp</dimen>
+
+</resources>

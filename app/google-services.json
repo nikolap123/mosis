@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "912105200464",
+    "firebase_url": "https://b-tracker-ed5ca-default-rtdb.firebaseio.com",
+    "project_id": "b-tracker-ed5ca",
+    "storage_bucket": "b-tracker-ed5ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912105200464:android:e913209205a737aa07aa55",
+        "android_client_info": {
+          "package_name": "com.boopro.btracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912105200464-7kk7hs3pmf65vanj6josdafpa85omjtr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDI216NZi2QHMGRy1rsH5ObknGZBpR-Gzo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "912105200464-7kk7hs3pmf65vanj6josdafpa85omjtr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

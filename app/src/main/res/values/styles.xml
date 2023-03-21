@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Style.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/light_blue</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginStart">@dimen/btnMarginStart</item>
+        <item name="android:layout_marginEnd">@dimen/btnMarginEnd</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/btnSize</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.AppCompat</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.SmallComponent</item>
+    </style>
+
+    <style name="Style.Text.Input" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/txtMarginStart</item>
+        <item name="android:layout_marginEnd">@dimen/txtMarginEnd</item>
+        <item name="android:layout_marginTop">@dimen/txtInputMargin</item>
+        <item name="android:textSize">@dimen/textSize</item>
+    </style>
+
+
+    <!-- Dialog Divider Style -->
+    <style name="dialogDivider" parent="Widget.MaterialComponents.MaterialDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dividerHeight</item>
+        <item name="backgroundTint">@color/search_border</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+    </style>
+
+    <!--Dialog Button Style -->
+    <style name="dialogButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/purple_200</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+    </style>
+
+    <!-- Dialog CardView Style -->
+    <style name="dialogCardView" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">@dimen/dialogCardViewMargins</item>
+        <item name="cardCornerRadius">@dimen/dialogCardViewCornerRadius</item>
+        <item name="cardElevation">@dimen/dialogCardViewElevation</item>
+        <item name="backgroundTint">@color/bnv_color</item>
+    </style>
+
+    <!-- RecyclerView CardView Style -->
+    <style name="recycleViewCardView" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardElevation">@dimen/recyclerViewCardViewElevation</item>
+        <item name="cardCornerRadius">@dimen/recyclerViewCardViewCornerRadius</item>
+        <item name="android:layout_margin">@dimen/recyclerViewCardViewMargins</item>
+        <item name="backgroundTint">@color/bnv_color</item>
+    </style>
+
+    <!-- ProfileFragment Buttons Style -->
+    <style name="profileFragmentBtn" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">@dimen/profileBtnWidth</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/profileBtnTextSize</item>
+        <item name="android:textColor">@color/bnv_color</item>
+        <item name="android:layout_marginStart">@dimen/profileBtnMarginStart</item>
+        <item name="android:layout_marginTop">@dimen/profileBtnMarginTop</item>
+        <item name="android:layout_marginEnd">@dimen/btnMarginEnd</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="backgroundTint">@color/search_border</item>
+        <item name="layout_constraintStart_toEndOf">@id/profileFragmentGuideline</item>
+    </style>
+
+    <!-- ProfileFragment TextView Style -->
+    <style name="profileFragmentTextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/profileTVTextSize</item>
+        <item name="android:textColor">@color/search_border</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="android:layout_marginEnd">@dimen/profileTVMarginEnd</item>
+        <item name="layout_constraintEnd_toStartOf">@id/profileFragmentGuideline</item>
+    </style>
+
+    <!-- ProfileFragment TextInputEditText Style -->
+    <style name="profileFragmentTextInputEditText" parent="ThemeOverlay.Material3.TextInputEditText">
+        <item name="android:layout_width">@dimen/profileTIETWidth</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/profileTIETMargin</item>
+        <item name="android:enabled">false</item>
+        <item name="android:textColor">@color/search_border</item>
+        <item name="android:textSize">@dimen/profileTIETTextSize</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintStart_toEndOf">@id/profileFragmentGuideline</item>
+        <item name="android:inputType">textPersonName</item>
+    </style>
+
+</resources>

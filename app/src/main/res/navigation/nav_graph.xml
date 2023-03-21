@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.boopro.btracker.screens.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.boopro.btracker.screens.map.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" >
+    </fragment>
+    <fragment
+        android:id="@+id/friendsFragment"
+        android:name="com.boopro.btracker.screens.friends.FriendsFragment"
+        android:label="fragment_friends"
+        tools:layout="@layout/fragment_friends" >
+    </fragment>
+    <fragment
+        android:id="@+id/rankListFragment"
+        android:name="com.boopro.btracker.screens.rank_list.RankListFragment"
+        android:label="fragment_rank_list"
+        tools:layout="@layout/fragment_rank_list" >
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.boopro.btracker.screens.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

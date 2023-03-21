@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".screens.profile.ProfileFragment">
+
+    <data>
+        <variable
+            name="user"
+            type="com.boopro.btracker.data.model.UserModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="1200dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/profileFragmentGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.45" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileFragmentImageView"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:clickable="false"
+                app:imgCornerRadius="@{@dimen/shapeableImageViewCornerRadiusProfile}"
+                app:layout_constraintEnd_toStartOf="@id/profileFragmentGuideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/profileFragmentEditProfileBtn"
+                style="@style/profileFragmentBtn"
+                android:layout_marginTop="10dp"
+                android:text="@string/edit_profile"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/profileFragmentSaveChangesBtn"
+                style="@style/profileFragmentBtn"
+                android:layout_marginTop="10dp"
+                android:text="@string/save_changes"
+                android:visibility="invisible"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/profileFragmentChangePictureBtn"
+                style="@style/profileFragmentBtn"
+                android:text="@string/change_picture"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@id/profileFragmentSaveChangesBtn"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profileFragmentFirstnameLayout"
+                style="@style/Style.Text.Input"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@id/profileFragmentImageView"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profileFragmentFirstname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:padding="12dp"
+                    android:text="@{user.firstname}"
+                    app:layout_constraintTop_toBottomOf="@id/profileFragmentImageView"
+                    tools:ignore="MissingConstraints" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profileFragmentLastnameLayout"
+                style="@style/Style.Text.Input"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@id/profileFragmentFirstnameLayout"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profileFragmentLastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:padding="12dp"
+                    android:text="@{user.lastname}"
+                    app:layout_constraintTop_toBottomOf="@id/profileFragmentFirstname"
+                    tools:ignore="MissingConstraints" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profileFragmentUsernameLayout"
+                style="@style/Style.Text.Input"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@id/profileFragmentLastnameLayout"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profileFragmentUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:text="@{user.username}"
+                    android:padding="12dp"
+                    app:layout_constraintTop_toBottomOf="@id/profileFragmentLastname"
+                    tools:ignore="MissingConstraints" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profileFragmentEmailLayout"
+                style="@style/Style.Text.Input"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@id/profileFragmentUsernameLayout"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profileFragmentEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:inputType="textEmailAddress"
+                    android:text="@{user.email}"
+                    android:padding="12dp"
+                    app:layout_constraintTop_toBottomOf="@id/profileFragmentUsername"
+                    tools:ignore="MissingConstraints" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profileFragmentPhoneNumberLayout"
+                style="@style/Style.Text.Input"
+                android:textSize="20sp"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@id/profileFragmentEmailLayout"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profileFragmentPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:inputType="phone"
+                    android:padding="12dp"
+                    android:text="@{user.phoneNumber}"
+                    app:layout_constraintTop_toBottomOf="@id/profileFragmentEmail"
+                    tools:ignore="MissingConstraints" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/profileFragmentLogoutBtn"
+                style="@style/profileFragmentBtn"
+                android:text="@string/logout"
+                app:layout_constraintTop_toBottomOf="@id/profileFragmentEditProfileBtn"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

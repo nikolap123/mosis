@@ -1,0 +1,69 @@
+<resources>
+
+    <string name="app_name">B-Tracker</string>
+    <string name="btracker">BTracker</string>
+    <string name="password">Password</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="phone">Phone number</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create account</string>
+    <string name="add_profile_photo">Add profile photo</string>
+    <string name="register">Register</string>
+    <string name="next">Next</string>
+    <string name="required_field">Required field</string>
+    <string name="password_less_than_8">Password can not be less than 8</string>
+    <string name="required_at_least_1_digit">Required at least 1 digit</string>
+    <string name="first_name_only_letters">First name must contain only letters</string>
+    <string name="last_name_only_letters">Last name must contain only letters</string>
+    <string name="upper_and_lower_case_letters">Password must contain upper and lower case letters</string>
+    <string name="required_special_character"> Required 1 special character</string>
+    <string name="passwords_don_not_match">Passwords do not match</string>
+    <string name="invalid_email">Invalid email</string>
+    <string name="invalid_phone">Invalid phone</string>
+    <string name="home">Home</string>
+    <string name="map">Map</string>
+    <string name="friends">Friends</string>
+    <string name="rank_list">Rank list</string>
+    <string name="add_friend">Add friend</string>
+    <string name="search_friends">Search friends</string>
+    <string name="remember_me">Remember me</string>
+    <string name="add_complaint">Add complaint</string>
+    <string name="search_complaint">Search complaint</string>
+    <string name="close">Close</string>
+
+    <!-- Nearby connection strings -->
+    <string name="serviceId">com.boopro.btracker</string>
+    <string name="accept">Accept</string>
+    <string name="cancel">Cancel</string>
+    <string name="accept_connection">Accept connection to </string>
+    <string name="confirm_devices">Confirm the code matches on both device: </string>
+    <string name="advertising">ADVERTISING</string>
+    <string name="discovery">DISCOVERY</string>
+    <string name="location">Do you want to turn on location?</string>
+    <string name="turn_on">TURN ON</string>
+    <string name="profile">Profile</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="save_changes">Save changes</string>
+    <string name="logout">Logout</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="change_picture">Change picture</string>
+    <string name="your_rank">Your rank: 50</string>
+    <string name="GPS">This application requires GPS to work properly, enable it to continue</string>
+
+    <string name="GOOGLE_MAPS_API_KEY">AIzaSyBHHtUp3-epoXmg2GBGyxDz0omDDtReReo</string>
+    <string name="title">Title</string>
+    <string name="enter_complaint_title">Enter Title</string>
+    <string name="complaint">Text</string>
+    <string name="enter_complaint_text">Enter Text</string>
+    <string name="post">POST</string>
+    <string name="radius">Radius</string>
+    <string name="enter_radius_of_search">Enter radius</string>
+    <string name="enter_username">Enter username</string>
+    <string name="apply">Apply</string>
+    <string name="author">Author: </string>
+    <string name="like">Like</string>
+
+</resources>

@@ -21,6 +21,7 @@ import androidx.core.location.LocationManagerCompat.requestLocationUpdates
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.boopro.btracker.R
+import com.boopro.btracker.data.Repository
 import com.boopro.btracker.data.model.ComplaintModel
 import com.boopro.btracker.data.remote.MapWrapper
 import com.boopro.btracker.databinding.FragmentMapBinding
@@ -33,6 +34,9 @@ import com.google.android.gms.maps.MapsInitializer.Renderer
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.tasks.CancellationTokenSource
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 
 class MapFragment : Fragment() {
@@ -148,18 +152,34 @@ class MapFragment : Fragment() {
     }
 
     fun onMapReady(googleMap: GoogleMap) {
-//        lifecycleScope.launch(Dispatchers.IO) {
-//            Repository.getFriendsComplaints().collect {
-//                withContext(Dispatchers.Main) {
-//                    MapWrapper.friendsComplaints(requireContext(), googleMap, it.values.toList())
-//
-//                    Consts.friendsComplaints = it
-//                }
-//            }
-//        }
-        MapWrapper.userComplaints(requireContext(), googleMap)
+        lifecycleScope.launch(Dispatchers.IO){
+            Repository.getFriendsComplaints().collect {
+                withContext(Dispatchers.Main) {
+                    MapWrapper.friendsComplaints(requireContext(), googleMap, it.values.toList())
 
-        MapWrapper.friendsComplaints(requireContext(), googleMap)
+                    Consts.friendsComplaints = it
+                }
+            }
+
+        }
+
+        lifecycleScope.launch(Dispatchers.IO){
+            Repository.getUserComplaints().collect {
+                withContext(Dispatchers.Main) {
+                    MapWrapper.userComplaints(requireContext(), googleMap, it)
+
+                    println("UserCompsMap" + it)
+                    Consts.currentUserComplaints = it as MutableList<ComplaintModel>;
+                }
+            }
+
+        }
+
+
+
+//        MapWrapper.userComplaints(requireContext(), googleMap)
+//
+//        MapWrapper.friendsComplaints(requireContext(), googleMap)
 
         if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return

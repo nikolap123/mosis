@@ -14,6 +14,7 @@ object NearbyConnectionWrapper {
     private fun getConnectionLifecycleCallback(context: Context): ConnectionLifecycleCallback {
         return object : ConnectionLifecycleCallback() {
             override fun onConnectionInitiated(endpointId: String, info: ConnectionInfo) {
+                // Test
                 AlertDialog.Builder(context)
                     .setTitle(context.getString(R.string.accept_connection) + " " + info.endpointName)
                     .setMessage(context.getString(R.string.confirm_devices) + " " + info.authenticationDigits)

@@ -23,21 +23,28 @@ import kotlinx.coroutines.withContext
 // Class which will handle everything related to Map
 object MapWrapper {
 
-    fun userComplaints(context: Context, googleMap: GoogleMap) {
-        for (complaint in Consts.currentUserComplaints) {
-            googleMap.addMarker(MarkerOptions().position(LatLng(complaint.latitude, complaint.longitude)).title(complaint.title).snippet(null).icon(getBitmapDescriptorFromVector(context, R.drawable.user_complaint_marker)))
-        }
-    }
-    fun friendsComplaints(context: Context, googleMap: GoogleMap) {
-        for (complaint in Consts.friendsComplaints.values) {
-            googleMap.addMarker(MarkerOptions().position(LatLng(complaint.latitude, complaint.longitude)).title(complaint.title).snippet(getFriendUsernameById(complaint.userId)).icon(getBitmapDescriptorFromVector(context, R.drawable.friend_complaint_marker)))
-        }
-    }
-//    fun friendsComplaints(context: Context, googleMap: GoogleMap,userFriendsComplaints: List<ComplaintModel>) {
-//        for (complaint in userFriendsComplaints) {
+//    fun userComplaints(context: Context, googleMap: GoogleMap) {
+//        for (complaint in Consts.currentUserComplaints) {
+//            googleMap.addMarker(MarkerOptions().position(LatLng(complaint.latitude, complaint.longitude)).title(complaint.title).snippet(null).icon(getBitmapDescriptorFromVector(context, R.drawable.user_complaint_marker)))
+//        }
+//    }
+//    fun friendsComplaints(context: Context, googleMap: GoogleMap) {
+//        for (complaint in Consts.friendsComplaints.values) {
 //            googleMap.addMarker(MarkerOptions().position(LatLng(complaint.latitude, complaint.longitude)).title(complaint.title).snippet(getFriendUsernameById(complaint.userId)).icon(getBitmapDescriptorFromVector(context, R.drawable.friend_complaint_marker)))
 //        }
 //    }
+    fun friendsComplaints(context: Context, googleMap: GoogleMap,userFriendsComplaints: List<ComplaintModel>) {
+        for (complaint in userFriendsComplaints) {
+            googleMap.addMarker(MarkerOptions().position(LatLng(complaint.latitude, complaint.longitude)).title(complaint.title).snippet(getFriendUsernameById(complaint.userId)).icon(getBitmapDescriptorFromVector(context, R.drawable.friend_complaint_marker)))
+        }
+    }
+
+    fun userComplaints(context: Context, googleMap: GoogleMap,userComplaints: List<ComplaintModel>) {
+        println("UserCompsMapWarp" + userComplaints)
+        for (complaint in userComplaints) {
+            googleMap.addMarker(MarkerOptions().position(LatLng(complaint.latitude, complaint.longitude)).title(complaint.title).snippet(null).icon(getBitmapDescriptorFromVector(context, R.drawable.user_complaint_marker)))
+        }
+    }
 
     fun filterComplaintsByTitle(context: Context, googleMap: GoogleMap, complaints: List<ComplaintModel>) {
         googleMap.clear()
